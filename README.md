@@ -15,7 +15,6 @@ to bring to you some advanced features: recommendations, artists and albums sear
 <td> <img src="Images/shot1.png" alt="Mobile" style="width: 250px;"/> </td>
 </tr></table>
 
-This is the UWP version for Windows 10 Mobile (min. os. build: 15063)  
 
 ## My 2 cents
 Friend's music mode - fixed a little :)
