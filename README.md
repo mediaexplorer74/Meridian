@@ -1,4 +1,4 @@
-# Meridian 7.3.1
+# Meridian 7.3.0.0
 
 This is my fork of [Stealth2012's Meridian-UWP, Desktop Edition](https://github.com/artemshuba/meridian-uwp).
 
