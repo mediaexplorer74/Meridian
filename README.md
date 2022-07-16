@@ -1,8 +1,8 @@
-# Meridian 7.2
+# Meridian 7.3
 
 This is my fork of [Stealth2012's Meridian-UWP, Desktop Edition](https://github.com/artemshuba/meridian-uwp).
 
-So, this is the UWP version for Windows 10/Mobile (min. os. build: 15063).
+So, this is the UWP version for Windows 10/Mobile (min. os. build: 14393).
 
 ## About
 Meridian is a music player which allows you to listen to music from popular Russian social network [vk.com](https://vk.com). 
@@ -17,7 +17,9 @@ to bring to you some advanced features: recommendations, artists and albums sear
 
 
 ## My 2 cents
-Friend's music mode - fixed a little :)
+Absolute Dark Theme now ok (for low-energy deals)
+Friend's Music mode - ok
+Explore mode - ok 
 
 ## The fields to explore
 - RemoteKit (RemoteCore + RemoteServer)

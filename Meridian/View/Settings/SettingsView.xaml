@@ -138,7 +138,7 @@
                    <Run Text="{Binding [Settings_AboutVersion], Source={StaticResource Resources}}" />
                    <Run Text="{Binding Version}"/>
                 </TextBlock>
-                <TextBlock FontSize="14" Opacity="0.6" Text="Copyright © Artem Shuba 2011 ― 2020" FontWeight="Normal"/>
+                <TextBlock FontSize="14" Opacity="0.6" Text="Copyright © Artem Shuba 2011 ― 2022" FontWeight="Normal"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

@@ -13,8 +13,8 @@
             <Color x:Key="BackgroundArtFadeColor">#00232323</Color>
             <Color x:Key="BackgroundArtMiddleFadeColor">#55232323</Color>
 
-            <Color x:Key="SystemAltHighColor">#232323</Color>
-            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#232323"/>
+            <Color x:Key="SystemAltHighColor">#000000</Color>
+            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#000000"/>
 
             <x:String x:Key="AlbumDefaultCover">/Resources/Images/AlbumDefaultCover-Dark.png</x:String>
         </ResourceDictionary>

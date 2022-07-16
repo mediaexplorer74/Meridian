@@ -250,7 +250,7 @@
     <value>Привет, {0}!</value>
   </data>
   <data name="Main_MenuItemExplore" xml:space="preserve">
-    <value>Explore</value>
+    <value>Открытия</value>
   </data>
   <data name="Main_MenuItemFeed" xml:space="preserve">
     <value>Лента</value>
@@ -274,7 +274,7 @@
     <value>Сообщества</value>
   </data>
   <data name="PageHeader_Explore" xml:space="preserve">
-    <value>Explore</value>
+    <value>Открытия</value>
   </data>
   <data name="PageHeader_Feed" xml:space="preserve">
     <value>Лента</value>
@@ -409,7 +409,7 @@
     <value>Выйти</value>
   </data>
   <data name="Settings_StartPageExplore" xml:space="preserve">
-    <value>Explore</value>
+    <value>Открытия</value>
   </data>
   <data name="Settings_StartPageHeader" xml:space="preserve">
     <value>Начальный экран</value>
@@ -418,7 +418,7 @@
     <value>Моя музыка</value>
   </data>
   <data name="Settings_ThemeDark" xml:space="preserve">
-    <value>Темная</value>
+    <value>Темная (Абсолют)</value>
   </data>
   <data name="Settings_ThemeDefault" xml:space="preserve">
     <value>Системная</value>

@@ -427,7 +427,7 @@
     <value>My music</value>
   </data>
   <data name="Settings_ThemeDark" xml:space="preserve">
-    <value>Dark</value>
+    <value>Dark (Absolute)</value>
   </data>
   <data name="Settings_ThemeDefault" xml:space="preserve">
     <value>System</value>
