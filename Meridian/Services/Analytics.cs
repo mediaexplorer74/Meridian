@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using Yandex.Metrica;
+//using Yandex.Metrica;
 
 namespace Meridian.Services
 {
@@ -50,7 +50,8 @@ namespace Meridian.Services
         public static void TrackEvent(string eventName, Dictionary<string, object> parameters = null)
         {
             string jsonData = parameters != null ? JsonConvert.SerializeObject(parameters) : null;
-            YandexMetrica.ReportEvent(eventName, jsonData);
+            
+            //YandexMetrica.ReportEvent(eventName, jsonData);
 
             Logger.Info("Analytics: " + eventName + " data: " + jsonData);
         }

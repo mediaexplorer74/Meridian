@@ -512,26 +512,35 @@
                            CharacterSpacing="30" Foreground="{ThemeResource ApplicationForegroundThemeBrush}"
                            FontWeight="SemiBold" FontSize="18" Opacity="0.6" Margin="0,40,0,0"/>
 
-                <commonControls:LoadingIndicator IsBusy="{Binding Operations[login].IsWorking}" Visibility="{Binding IsLoginFormVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+                <commonControls:LoadingIndicator IsBusy="{Binding Operations[login].IsWorking}" 
+                                                 Visibility="{Binding IsLoginFormVisible, Converter={StaticResource BoolToVisibilityConverter}}"
                                                  HorizontalContentAlignment="Stretch" Width="220">
                     <StackPanel>
                         <StackPanel x:Name="LoginForm" Margin="0,40,0,0">
                             <!-- Login textbox -->
-                            <TextBox x:Name="LoginBox" Text="{Binding Login, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource LoginTextBoxStyle}"
-                                     PlaceholderText="{Binding [Login_LoginPlaceholder], Source={StaticResource Resources}}" InputScope="EmailSmtpAddress"
+                            <TextBox x:Name="LoginBox" Text="{Binding Login, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                     Style="{StaticResource LoginTextBoxStyle}"
+                                     PlaceholderText="{Binding [Login_LoginPlaceholder], Source={StaticResource Resources}}" 
+                                     InputScope="EmailSmtpAddress"
                                      IsEnabled="{Binding IsLoginFormInputEnabled}"
                                      IsSpellCheckEnabled="False" KeyDown="LoginBox_KeyDown"/>
 
                             <!-- Password box -->
-                            <PasswordBox x:Name="PasswordBox" Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource LoginPasswordBoxStyle}"
+                            <PasswordBox x:Name="PasswordBox" 
+                                         Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource LoginPasswordBoxStyle}"
                                          PlaceholderText="{Binding [Login_PasswordPlaceholder], Source={StaticResource Resources}}"
                                          IsEnabled="{Binding IsLoginFormInputEnabled}"
                                          Margin="0,7,0,0" KeyDown="PasswordBox_KeyDown"/>
 
                             <!-- Captcha form -->
-                            <StackPanel x:Name="CaptchaForm" Margin="0,10,0,0" Visibility="{Binding IsCaptchaVisible, Converter={StaticResource BoolToVisibilityConverter}}">
-                                <Image Source="{Binding CaptchaImg}" HorizontalAlignment="Center" Height="60"/>
-                                <TextBox x:Name="CaptchaBox" x:Uid="LoginCaptchaBox" PlaceholderText="{Binding [Login_CaptchaPlaceholder], Source={StaticResource Resources}}" Text="{Binding CaptchaKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            <StackPanel x:Name="CaptchaForm" 
+                                        Margin="0,10,0,0" 
+                                        Visibility="{Binding IsCaptchaVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                                <Image Source="{Binding CaptchaImg}" 
+                                       HorizontalAlignment="Center" Height="60"/>
+                                <TextBox x:Name="CaptchaBox" x:Uid="LoginCaptchaBox" 
+                                         PlaceholderText="{Binding [Login_CaptchaPlaceholder], Source={StaticResource Resources}}" 
+                                         Text="{Binding CaptchaKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                          Style="{StaticResource CommonTextBoxStyle}" Margin="0,10,0,0"
                                          IsEnabled="{Binding IsLoginFormInputEnabled}"
                                          IsTextPredictionEnabled="False" IsSpellCheckEnabled="False" KeyDown="CaptchaBox_OnKeyDown"/>
@@ -542,17 +551,21 @@
                                        Margin="0,10,0,0" FontSize="12" MaxWidth="220"/>
 
                             <!-- Sign in button -->
-                            <Button x:Name="SignInButton" Content="{Binding [Login_SignIn], Source={StaticResource Resources}}" Command="{Binding LoginCommand}" Style="{StaticResource LoginButtonStyle}"
+                            <Button x:Name="SignInButton" 
+                                    Content="{Binding [Login_SignIn], Source={StaticResource Resources}}" Command="{Binding LoginCommand}" Style="{StaticResource LoginButtonStyle}"
                                     Margin="0,20,0,0"/>
                         </StackPanel>
                     </StackPanel>
                 </commonControls:LoadingIndicator>
 
-                <Button x:Name="SignInStartButton" Content="{Binding [Login_SignInVk], Source={StaticResource Resources}}" Command="{Binding SignInStartCommand}"
+                <Button x:Name="SignInStartButton" 
+                        Content="{Binding [Login_SignInVk], Source={StaticResource Resources}}" 
+                        Command="{Binding SignInStartCommand}"
                         HorizontalAlignment="Center"
                         Margin="0,40,0,0" Style="{StaticResource SignInVkButtonStyle}" Visibility="{Binding IsLoginStartVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
 
-                <Button Style="{StaticResource SimpleButtonStyle}" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" Margin="0,30,0,0"
+                <Button Style="{StaticResource SimpleButtonStyle}" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" 
+                        Margin="0,30,0,0"
                         FontSize="12" FontWeight="Normal" HorizontalContentAlignment="Center" Command="{Binding SignUpCommand}"
                         Visibility="{Binding IsLoginStartVisible, Converter={StaticResource BoolToVisibilityConverter}}">
                     <TextBlock Text="{Binding [Login_SignUpVk], Source={StaticResource Resources}}"/>
@@ -560,6 +573,6 @@
             </StackPanel>
         </Grid>
 
-        <TextBlock Text="© Artem Shuba 2011 ― 2022" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,15" FontSize="12" Opacity="0.6" CharacterSpacing="20"/>
+        <TextBlock Text="© Artem Shuba 2011 ― 2023" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,15" FontSize="12" Opacity="0.6" CharacterSpacing="20"/>
     </Grid>
 </Page>

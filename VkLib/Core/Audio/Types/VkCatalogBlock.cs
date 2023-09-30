@@ -119,12 +119,12 @@ namespace VkLib.Core.Audio
 
             result.Id = json["id"].Value<string>();
             result.Title = json["title"].Value<string>();
-            result.Subtitle = json["subtitle"].Value<string>();
+            result.Subtitle = "Subtitle";//json["subtitle"].Value<string>();
 
-            result.Type = json["type"].Value<string>();
-            result.Count = json["count"].Value<int>();
+            result.Type = "music";//json["type"].Value<string>();
+            result.Count = 1;//json["count"].Value<int>();
 
-            result.Source = json["source"].Value<string>();
+            result.Source = "source";//json["source"].Value<string>();
 
             if (json["audios"] != null)
                 result.Audios = json["audios"].Select(VkAudio.FromJson).ToList();

@@ -20,15 +20,28 @@
         <Setter Property="MinHeight" Value="0" />
         <Setter Property="AllowDrop" Value="False" />
         <Setter Property="UseSystemFocusVisuals" Value="True" />
-        <Setter Property="FocusVisualMargin" Value="0" />
+        <!--Setter Property="FocusVisualMargin" Value="0" />
         <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource SystemControlFocusVisualPrimaryBrush}" />
         <Setter Property="FocusVisualPrimaryThickness" Value="2" />
         <Setter Property="FocusVisualSecondaryBrush" Value="{ThemeResource SystemControlFocusVisualSecondaryBrush}" />
-        <Setter Property="FocusVisualSecondaryThickness" Value="1" />
+        <Setter Property="FocusVisualSecondaryThickness" Value="1" /-->
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="ListViewItem">
-                    <Grid x:Name="ContentBorder" Control.IsTemplateFocusTarget="True" FocusVisualMargin="{TemplateBinding FocusVisualMargin}" FocusVisualPrimaryBrush="{TemplateBinding FocusVisualPrimaryBrush}" FocusVisualPrimaryThickness="{TemplateBinding FocusVisualPrimaryThickness}" FocusVisualSecondaryBrush="{TemplateBinding FocusVisualSecondaryBrush}" FocusVisualSecondaryThickness="{TemplateBinding FocusVisualSecondaryThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" RenderTransformOrigin="0.5,0.5">
+                <ControlTemplate TargetType="ListViewItem">                    
+                        <!--
+                         FocusVisualMargin="{TemplateBinding FocusVisualMargin}" 
+                         FocusVisualPrimaryBrush="{TemplateBinding FocusVisualPrimaryBrush}" 
+                         FocusVisualPrimaryThickness="{TemplateBinding FocusVisualPrimaryThickness}" 
+                         FocusVisualSecondaryBrush="{TemplateBinding FocusVisualSecondaryBrush}" 
+                         FocusVisualSecondaryThickness="{TemplateBinding FocusVisualSecondaryThickness}" 
+                        -->
+                    <Grid x:Name="ContentBorder" 
+                          Control.IsTemplateFocusTarget="True"
+                         
+                          Background="{TemplateBinding Background}" 
+                          BorderBrush="{TemplateBinding BorderBrush}" 
+                          BorderThickness="{TemplateBinding BorderThickness}" 
+                          RenderTransformOrigin="0.5,0.5">
                         <Grid.RenderTransform>
                             <ScaleTransform x:Name="ContentBorderScale" />
                         </Grid.RenderTransform>
@@ -222,21 +235,23 @@
         <Setter Property="MinHeight" Value="{ThemeResource ListViewItemMinHeight}" />
         <Setter Property="AllowDrop" Value="False" />
         <Setter Property="UseSystemFocusVisuals" Value="True" />
-        <Setter Property="FocusVisualMargin" Value="0" />
+        <!--Setter Property="FocusVisualMargin" Value="0" />
         <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource SystemControlFocusVisualPrimaryBrush}" />
         <Setter Property="FocusVisualPrimaryThickness" Value="2" />
         <Setter Property="FocusVisualSecondaryBrush" Value="{ThemeResource SystemControlFocusVisualSecondaryBrush}" />
-        <Setter Property="FocusVisualSecondaryThickness" Value="1" />
+        <Setter Property="FocusVisualSecondaryThickness" Value="1" /-->
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
+                    <!--
+                      FocusVisualMargin="{TemplateBinding FocusVisualMargin}"
+                      FocusVisualPrimaryBrush="{TemplateBinding FocusVisualPrimaryBrush}"
+                      FocusVisualPrimaryThickness="{TemplateBinding FocusVisualPrimaryThickness}"
+                      FocusVisualSecondaryBrush="{TemplateBinding FocusVisualSecondaryBrush}"
+                      FocusVisualSecondaryThickness="{TemplateBinding FocusVisualSecondaryThickness}"
+                    -->
                     <Grid x:Name="ContentBorder"
                         Control.IsTemplateFocusTarget="True"
-                        FocusVisualMargin="{TemplateBinding FocusVisualMargin}"
-                        FocusVisualPrimaryBrush="{TemplateBinding FocusVisualPrimaryBrush}"
-                        FocusVisualPrimaryThickness="{TemplateBinding FocusVisualPrimaryThickness}"
-                        FocusVisualSecondaryBrush="{TemplateBinding FocusVisualSecondaryBrush}"
-                        FocusVisualSecondaryThickness="{TemplateBinding FocusVisualSecondaryThickness}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
@@ -631,15 +646,27 @@
         <Setter Property="MinHeight" Value="0" />
         <Setter Property="AllowDrop" Value="False" />
         <Setter Property="UseSystemFocusVisuals" Value="True" />
-        <Setter Property="FocusVisualMargin" Value="0" />
+        <!--Setter Property="FocusVisualMargin" Value="0" />
         <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource SystemControlFocusVisualPrimaryBrush}" />
         <Setter Property="FocusVisualPrimaryThickness" Value="2" />
         <Setter Property="FocusVisualSecondaryBrush" Value="{ThemeResource SystemControlFocusVisualSecondaryBrush}" />
-        <Setter Property="FocusVisualSecondaryThickness" Value="1" />
+        <Setter Property="FocusVisualSecondaryThickness" Value="1" /-->
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
-                    <Grid x:Name="ContentBorder" Control.IsTemplateFocusTarget="True" FocusVisualMargin="{TemplateBinding FocusVisualMargin}" FocusVisualPrimaryBrush="{TemplateBinding FocusVisualPrimaryBrush}" FocusVisualPrimaryThickness="{TemplateBinding FocusVisualPrimaryThickness}" FocusVisualSecondaryBrush="{TemplateBinding FocusVisualSecondaryBrush}" FocusVisualSecondaryThickness="{TemplateBinding FocusVisualSecondaryThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" RenderTransformOrigin="0.5,0.5">
+                        <!--
+                        FocusVisualMargin="{TemplateBinding FocusVisualMargin}" 
+                        FocusVisualPrimaryBrush="{TemplateBinding FocusVisualPrimaryBrush}" 
+                        FocusVisualPrimaryThickness="{TemplateBinding FocusVisualPrimaryThickness}" 
+                        FocusVisualSecondaryBrush="{TemplateBinding FocusVisualSecondaryBrush}" 
+                        FocusVisualSecondaryThickness="{TemplateBinding FocusVisualSecondaryThickness}" 
+                        -->
+                     <Grid x:Name="ContentBorder" 
+                          Control.IsTemplateFocusTarget="True"                           
+                          Background="{TemplateBinding Background}" 
+                          BorderBrush="{TemplateBinding BorderBrush}" 
+                          BorderThickness="{TemplateBinding BorderThickness}" 
+                          RenderTransformOrigin="0.5,0.5">
                         <Grid.RenderTransform>
                             <ScaleTransform x:Name="ContentBorderScale" />
                         </Grid.RenderTransform>
@@ -803,11 +830,11 @@
         <Setter Property="MinHeight" Value="0" />
         <Setter Property="AllowDrop" Value="False" />
         <Setter Property="UseSystemFocusVisuals" Value="True" />
-        <Setter Property="FocusVisualMargin" Value="0" />
+        <!--Setter Property="FocusVisualMargin" Value="0" />
         <Setter Property="FocusVisualPrimaryBrush" Value="{ThemeResource SystemControlFocusVisualPrimaryBrush}" />
         <Setter Property="FocusVisualPrimaryThickness" Value="2" />
         <Setter Property="FocusVisualSecondaryBrush" Value="{ThemeResource SystemControlFocusVisualSecondaryBrush}" />
-        <Setter Property="FocusVisualSecondaryThickness" Value="1" />
+        <Setter Property="FocusVisualSecondaryThickness" Value="1" /-->
     </Style>
 
     <Style x:Key="TracksListGroupHeaderItemStyle" TargetType="ListViewHeaderItem">

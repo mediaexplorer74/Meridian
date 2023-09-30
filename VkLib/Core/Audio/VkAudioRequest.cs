@@ -341,66 +341,7 @@ namespace VkLib.Core.Audio
             return null;
         }
 
-        public async Task<VkItemsResponse<VkAudio>> GetRecommendations(string targetAudio = null, int count = 0, int offset = 0, long userId = 0, bool shuffle = false)
-        {
-            var parameters = new Dictionary<string, string>();
-
-            if (!string.IsNullOrEmpty(targetAudio))
-                parameters.Add("target_audio", targetAudio);
-
-            if (userId > 0)
-                parameters.Add("user_id", userId.ToString(CultureInfo.InvariantCulture));
-
-            if (count > 0)
-                parameters.Add("count", count.ToString(CultureInfo.InvariantCulture));
-
-            if (offset > 0)
-                parameters.Add("offset", offset.ToString(CultureInfo.InvariantCulture));
-
-            if (shuffle)
-                parameters.Add("shuffle", "1");
-
-            _vkontakte.SignMethod(parameters);
-
-            var response = await VkRequest.GetAsync(VkConst.MethodBase + "audio.getRecommendations", parameters);
-
-            var token = response.SelectToken("response.items");
-            if (token != null && token.HasValues)
-            {
-                return new VkItemsResponse<VkAudio>((from a in token select VkAudio.FromJson(a)).ToList());
-            }
-
-            return VkItemsResponse<VkAudio>.Empty;
-        }
-
-        public async Task<VkItemsResponse<VkAudio>> GetPopular(bool onlyEng = false, int count = 0, int offset = 0, int genreId = 0)
-        {
-            var parameters = new Dictionary<string, string>();
-
-            if (onlyEng)
-                parameters.Add("only_eng", "1");
-
-            if (genreId != 0)
-                parameters.Add("genre_id", genreId.ToString(CultureInfo.InvariantCulture));
-
-            if (count > 0)
-                parameters.Add("count", count.ToString(CultureInfo.InvariantCulture));
-
-            if (offset > 0)
-                parameters.Add("offset", offset.ToString(CultureInfo.InvariantCulture));
-
-            _vkontakte.SignMethod(parameters);
-
-            var response = await VkRequest.GetAsync(VkConst.MethodBase + "audio.getPopular", parameters);
-
-            if (response["response"]?.HasValues == true)
-            {
-                return new VkItemsResponse<VkAudio>((from a in response["response"] select VkAudio.FromJson(a)).ToList());
-            }
-
-            return VkItemsResponse<VkAudio>.Empty;
-        }
-
+        
         public async Task<long> Edit(long ownerId, long audioId, string artist = null, string title = null, string text = null, int genreId = 0, bool noSearch = false)
         {
             var parameters = new Dictionary<string, string>();
@@ -624,20 +565,100 @@ namespace VkLib.Core.Audio
             return null;
         }
 
+        // GetCatalog
         public async Task<List<VkCatalogBlock>> GetCatalog()
         {
+            
             var parameters = new Dictionary<string, string>();
+
+            //RnD
+            int count = 1;
+            parameters.Add("count", count.ToString(CultureInfo.InvariantCulture));
 
             _vkontakte.SignMethod(parameters);
 
-            var response = await VkRequest.GetAsync(VkConst.MethodBase + "audio.getCatalog", parameters);
+            //RnD
+            //var response = await VkRequest.GetAsync(VkConst.MethodBase + "audio.getCatalog", parameters);
+            var response = await VkRequest.GetAsync(VkConst.MethodBase + "audio.getRecommendations", parameters);
 
-            if (response.SelectToken("response.items") != null)
+
+            //if (response.SelectToken("response.items") != null)
+            //{
+            //    return response.SelectToken("response.items").Select(VkCatalogBlock.FromJson).ToList();
+            //}
+            var token = response.SelectToken("response.items");
+            if (token != null && token.HasValues)
             {
-                return response.SelectToken("response.items").Select(VkCatalogBlock.FromJson).ToList();
+                List<VkCatalogBlock> r = token.Select(VkCatalogBlock.FromJson).ToList();
+                return r;
             }
 
             return null;
-        }
-    }
+            
+        }//GetCatalog
+
+        // GetRecommendations
+        public async Task<VkItemsResponse<VkAudio>> GetRecommendations(string targetAudio = null, int count = 0, int offset = 0, long userId = 0, bool shuffle = false)
+        {
+            var parameters = new Dictionary<string, string>();
+
+            if (!string.IsNullOrEmpty(targetAudio))
+                parameters.Add("target_audio", targetAudio);
+
+            if (userId > 0)
+                parameters.Add("user_id", userId.ToString(CultureInfo.InvariantCulture));
+
+            if (count > 0)
+                parameters.Add("count", count.ToString(CultureInfo.InvariantCulture));
+
+            if (offset > 0)
+                parameters.Add("offset", offset.ToString(CultureInfo.InvariantCulture));
+
+            if (shuffle)
+                parameters.Add("shuffle", "1");
+
+            _vkontakte.SignMethod(parameters);
+
+            var response = await VkRequest.GetAsync(VkConst.MethodBase + "audio.getRecommendations", parameters);
+
+            var token = response.SelectToken("response.items");
+            if (token != null && token.HasValues)
+            {
+                return new VkItemsResponse<VkAudio>((from a in token select VkAudio.FromJson(a)).ToList());
+            }
+
+            return VkItemsResponse<VkAudio>.Empty;
+        }//GetRecommendations
+
+        // GetPopular
+        public async Task<VkItemsResponse<VkAudio>> GetPopular(bool onlyEng = false, int count = 0, int offset = 0, int genreId = 0)
+        {
+            var parameters = new Dictionary<string, string>();
+
+            if (onlyEng)
+                parameters.Add("only_eng", "1");
+
+            if (genreId != 0)
+                parameters.Add("genre_id", genreId.ToString(CultureInfo.InvariantCulture));
+
+            if (count > 0)
+                parameters.Add("count", count.ToString(CultureInfo.InvariantCulture));
+
+            if (offset > 0)
+                parameters.Add("offset", offset.ToString(CultureInfo.InvariantCulture));
+
+            _vkontakte.SignMethod(parameters);
+
+            var response = await VkRequest.GetAsync(VkConst.MethodBase + "audio.getPopular", parameters);
+
+            if (response["response"]?.HasValues == true)
+            {
+                return new VkItemsResponse<VkAudio>((from a in response["response"] select VkAudio.FromJson(a)).ToList());
+            }
+
+            return VkItemsResponse<VkAudio>.Empty;
+        }//GetPopular
+
+
+    }//VkAudioRequest class end
 }
