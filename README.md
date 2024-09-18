@@ -11,11 +11,8 @@ It communicates with some additional services like [deezer.com](http://deezer.co
 to bring to you some advanced features: recommendations, artists and albums search and other.
 
 ## Screenshots
-<table><tr>
-<td> <img src="Images/shot01.png" alt="Mobile" style="width: 250px;"/> </td>
-<td> <img src="Images/shot02.png" alt="Mobile" style="width: 250px;"/> </td>
-</tr></table>
-
+![Win11Tiny](/Images/shot01.png)
+![W10M](/Images/shot02.png)
 
 ## My 2 cents
 - Solution optimization (RemoteKit & LastFm/Deezer/Groove libs truncated/cutted)
