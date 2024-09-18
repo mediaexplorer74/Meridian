@@ -7,9 +7,6 @@ So, this is the UWP version for Windows 10/Mobile (min. os. build: 10240).
 ## About
 Meridian is a music player which allows you to listen to music from popular Russian social network [vk.com](https://vk.com). 
 
-It communicates with some additional services like [deezer.com](http://deezer.com) and [last.fm](http://last.fm) 
-to bring to you some advanced features: recommendations, artists and albums search and other.
-
 ## Screenshots
 ![Win11Tiny](/Images/shot01.png)
 ![W10M](/Images/shot02.png)
