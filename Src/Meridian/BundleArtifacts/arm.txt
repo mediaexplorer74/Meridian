@@ -1,0 +1,6 @@
+MainPackage=C:\Users\Admin\source\repos\Meridian\Meridian\bin\ARM\Debug\Meridian_10.0.0.0_ARM_Debug.appx
+ResourcePack=C:\Users\Admin\source\repos\Meridian\Meridian\bin\ARM\Debug\Meridian_10.0.0.0_language-ru.appx
+ResourcePack=C:\Users\Admin\source\repos\Meridian\Meridian\bin\ARM\Debug\Meridian_10.0.0.0_scale-100.appx
+ResourcePack=C:\Users\Admin\source\repos\Meridian\Meridian\bin\ARM\Debug\Meridian_10.0.0.0_scale-125.appx
+ResourcePack=C:\Users\Admin\source\repos\Meridian\Meridian\bin\ARM\Debug\Meridian_10.0.0.0_scale-150.appx
+ResourcePack=C:\Users\Admin\source\repos\Meridian\Meridian\bin\ARM\Debug\Meridian_10.0.0.0_scale-400.appx

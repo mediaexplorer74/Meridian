@@ -1,4 +1,4 @@
-# Meridian 7.4.1.0
+# Meridian v10 
 
 This is my fork of [Stealth2012's Meridian-UWP, Desktop Edition](https://github.com/artemshuba/meridian-uwp).
 
@@ -12,14 +12,17 @@ to bring to you some advanced features: recommendations, artists and albums sear
 
 ## Screenshots
 <table><tr>
-<td> <img src="Images/shot1.png" alt="Mobile" style="width: 250px;"/> </td>
+<td> <img src="Images/shot01.png" alt="Mobile" style="width: 250px;"/> </td>
+<td> <img src="Images/shot02.png" alt="Mobile" style="width: 250px;"/> </td>
 </tr></table>
 
 
 ## My 2 cents
-- Absolute Dark Theme now ok (for low-energy deals)
+- Solution optimization (RemoteKit & LastFm/Deezer/Groove libs truncated/cutted)
+- MusicList Exception handling improving (a little)
+- Absolute Dark Theme for low-energy deals ok (?)
 - Friend's Music mode - ok
-- Explore mode - not fixed yet 
+- Explore mode - ok (?) 
 - Astoria 10240 - successfully compiled but app don t want to start :(
 
 ## The fields to explore
@@ -27,11 +30,19 @@ to bring to you some advanced features: recommendations, artists and albums sear
 - Astoria compatibility
 - RemoteKit (RemoteCore + RemoteServer)
 
+## TODO
+- All code exploring/refactoring
+- Additional test for my own "Andromeda" tablet with tweaked Win11Lite x86 :) 
+- Return LastFm ... Deezer .. Groove, or something else ? )))
+
 ## Contributing
-Changes and improvements are very welcome. Feel free to fork and open a pull request.
+Changes and improvements are very welcome. Feel free to fork and open a pull request! :)
+
+## Credits
+- https://github.com/artemshuba Artem Shuba aka Stealth2012, great c# developer
 
 ## .. 
 As is. No support. RnD only. DIY!
 
 ## .
- [m][e] 2023
+ [m][e] 2024
